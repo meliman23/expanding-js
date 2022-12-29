@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    box-sizing: border-box; /*when you want to set a fixed width or height on an element and have the padding and border fit within that fixed size.*/
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh ; /*takes up 100% of the veiw port*/
+    overflow: hidden;/*hides scroll bar */
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    width: 70vw;
+}
+.panel{
+    background-size: cover;/*makes the image 100% the size of the container */
+    background-position: center;
+    background-repeat: 0;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer; /*changes the curser*/
+    flex: 0.5;/*The size of the content */
+    margin: 10px;
+    position: relative;
+    transition: flex 0.9s ease-in;/*idk*/
+}
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+margin: 0;
+opacity: 0;
+}
+.panel.active{
+    flex: 3;
+}
+.panel.active h3{
+    opacity: 1;
+}
+
+@media (max-width :600px){
+    .container{
+        width: 100vw;
+
+    }
+    .panel:nth-of-type(3), .panel:nth-of-type(4){
+        display: none;
+    }
+    
+}

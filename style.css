@@ -4,43 +4,12 @@
 }
 
 body{
-    font-family: 'Courier New', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height:100vh ; /*takes up 100% of the veiw port*/
     overflow: hidden;/*hides scroll bar */
-}
-
-.bg{
-    background: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80') no-repeat center center/cover ; /* the / seperates the background-size and background-position  */
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
- filter: blur(20px);
-}
-
-
-.loading{
-    font-size: 50px;
-font-weight: bold;
-color: rgb(0, 5, 160);
-}
-
-.container{
-    position: absolute;
-  top: 40%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-}
-h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;  
-    font-size: 50px;
-    color: rgb(89, 89, 255);
 }

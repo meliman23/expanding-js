@@ -1,46 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-*{
-    box-sizing: border-box; /*when you want to set a fixed width or height on an element and have the padding and border fit within that fixed size.*/
-}
-
-body{
-    font-family: 'Courier New', sans-serif;
+body {
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:100vh ; /*takes up 100% of the veiw port*/
-    overflow: hidden;/*hides scroll bar */
-}
-
-.bg{
-    background: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80') no-repeat center center/cover ; /* the / seperates the background-size and background-position  */
-    width: 100vw;
+    padding: 0;
     height: 100vh;
-    position: absolute;
+    width: 100vw;
+   background-color:  #FE90AF;
+
+  }
+  
+/* navbar  */
+header {
+    background: linear-gradient(180deg, #C6EA8D, #FE90AF);
+    background-color: #143d41;
+    padding: 20px;
+  
+    height: 10vh;
+    z-index: 1;
+   
+    
+  }
+  
+  nav {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
     top: 0;
-    left: 0;
-    z-index: -1;
- filter: blur(20px);
-}
+    
+    width: 100%;
+    z-index: 1;
+    
+  }
+  
+  .logo a {
+    color: #000000;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .icon img {
+    width: 50px;
+    height: 50px;
+    margin-right: 4rem;
+   ;
+  }
+  /* container */
+  .content {
+    margin-top: 5rem; /* Add margin-top to the content equal to the height of the navbar */
+   
+  }
 
-
-.loading{
-    font-size: 50px;
-font-weight: bold;
-color: rgb(0, 5, 160);
-}
-
-.container{
+ .container{
     position: absolute;
-  top: 40%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-}
-h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;  
-    font-size: 50px;
-    color: rgb(89, 89, 255);
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5rem;
+  
+   
+
+ }
+ .container2{
+    display: flex;
+
+
+ }
+/* buttons */
+ button , select {
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    width: 40vw;
+    border: none;
+    font-size: 16px;
+ }
+ button{
+    background-color:  #C6EA8D ;
+    
+ }
+ /* image */
+
+ img{
+    z-index: -2;
+    width: 400px;
+ ;
+ }
+  

@@ -1,42 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Waifu Image Viewer</title>
+  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation bar (header) -->
   <header>
     <nav>
+      <!-- Logo text in the navbar -->
       <div class="logo">
         <a href="#">Waifu Wallpaper</a>
       </div>
+      <!-- Icon/image in the navbar -->
       <div class="icon">
         <a href="#"><img src="icon.png" alt="Anime Icon"></a>
       </div>
     </nav>
   </header>
   
-  <!-- windows + . for emojis -->
+  <!-- Main content area -->
   <div class="content">
-  
- 
-  <div class="container">
-
-    <img id="waifu-img" src="" >
-
-
-    <div class="container2">
-
-       <button id="update-btn">Click for waifus </button>
-
-      <select id="tagSelect"></select>
-
+    <!-- Main container for image and controls -->
+    <div class="container">
+      <!-- Wrapper for the image -->
+      <div class="image-wrapper">
+        <!-- Default image that loads on page load -->
+        <img id="waifu-img" src="default.jpg" alt="Default Waifu Image">
+      </div>
+      <!-- Buttons and dropdown area -->
+      <div class="container2">
+        <!-- Button to update the waifu image -->
+        <button id="update-btn">Click for Waifus</button>
+        <!-- Dropdown to select tags (like categories) -->
+        <select id="tagSelect">
+          <option value="default">Select Tag</option> <!-- Default option -->
+        </select>
+      </div>
     </div>
   </div>
-</div>
   
- <script src="waifu.js"></script>
+  <!-- Link to external JavaScript -->
+  <script src="waifu.js"></script>
 </body>
-
 </html>

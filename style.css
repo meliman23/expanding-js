@@ -1,88 +1,122 @@
+/* General Reset */
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-   background-color:  #FE90AF;
-
-  }
-  
-/* navbar  */
-header {
-    background: linear-gradient(180deg, #C6EA8D, #FE90AF);
-    background-color: #143d41;
-    padding: 20px;
-  
-    height: 10vh;
-    z-index: 1;
-   
-    
-  }
-  
-  nav {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    
-    width: 100%;
-    z-index: 1;
-    
-  }
-  
-  .logo a {
-    color: #000000;
-    font-size: 24px;
-    text-decoration: none;
-  }
-  
-  .icon img {
-    width: 50px;
-    height: 50px;
-    margin-right: 4rem;
-   ;
-  }
-  /* container */
-  .content {
-    margin-top: 5rem; /* Add margin-top to the content equal to the height of the navbar */
-   
-  }
-
- .container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 5rem;
-  
-   
-
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   width: 100vw;
+   background-color: #FE90AF; /* Pink background for aesthetics */
+   font-family: Arial, sans-serif; /* Consistent font style */
  }
- .container2{
-    display: flex;
-
-
+ 
+ /* Navbar Styling */
+ header {
+   background: linear-gradient(180deg, #C6EA8D, #FE90AF); /* Gradient for visual appeal */
+   padding: 0;
+   height: 10vh; /* Fixed navbar height */
+   position: fixed; /* Sticks to the top of the page */
+   top: 0;
+   width: 100%;
+   z-index: 1;
+   display: flex;
+   align-items: center;
  }
-/* buttons */
- button , select {
-    margin: 10px;
-    border-radius: 20px;
-    padding: 10px;
-    width: 40vw;
-    border: none;
-    font-size: 16px;
+ 
+ nav {
+   display: flex;
+   justify-content: center; /* Center align items in navbar */
+   align-items: center;
+   width: 100%;
  }
- button{
-    background-color:  #C6EA8D ;
-    
+ 
+ .logo a {
+   color: #000000; /* Black for text contrast */
+   font-size: 24px; /* Larger font size for emphasis */
+   text-decoration: none;
+   font-weight: bold;
  }
- /* image */
-
- img{
-    z-index: -2;
-    width: 400px;
- ;
+ 
+ .icon img {
+   width: 50px; /* Resizable icon dimensions */
+   height: 50px;
  }
-  
+ 
+ /* Main Content Styling */
+ .content {
+   margin-top: 10vh; /* Offset for fixed navbar */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 90vh; /* Remainder of the viewport */
+ }
+ 
+ /* Image Container */
+ .container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1rem; /* Space between elements */
+ }
+ 
+ .image-wrapper {
+   width: 90%;
+   max-width: 400px; /* Maximum width for responsiveness */
+   aspect-ratio: 1 / 1; /* Maintains a square shape */
+   background-color: #FFFFFF; /* White background for clarity */
+   border: 5px solid #C6EA8D; /* Green border for contrast */
+   border-radius: 20px; /* Rounded edges */
+   overflow: hidden; /* Ensures content stays within boundaries */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .image-wrapper img {
+   width: 100%; /* Fully utilizes container width */
+   height: 100%;
+   object-fit: contain; /* Keeps the image within the bounds without distortion */
+ }
+ 
+ /* Buttons and Dropdown */
+ .container2 {
+   display: flex;
+   gap: 1rem; /* Space between button and dropdown */
+ }
+ 
+ button,
+ select {
+   border-radius: 20px; /* Rounded edges for style */
+   padding: 10px;
+   width: 40vw; /* Proportional to viewport */
+   max-width: 200px; /* Limits size on larger screens */
+   font-size: 16px; /* Legible font size */
+   border: none;
+   cursor: pointer; /* Pointer cursor for interactive elements */
+ }
+ 
+ button {
+   background-color: #C6EA8D; /* Green button color */
+   color: #000; /* Text color for contrast */
+   transition: background-color 0.3s; /* Smooth hover effect */
+ }
+ 
+ button:hover {
+   background-color: #FF6584; /* Changes color on hover */
+ }
+ 
+ /* Responsive Design */
+ @media (max-width: 768px) {
+   .logo a {
+     font-size: 18px; /* Smaller font size for smaller screens */
+   }
+   .icon img {
+     width: 40px;
+     height: 40px;
+   }
+   button,
+   select {
+     width: 60vw; /* Adjust width for smaller screens */
+     max-width: none;
+   }
+ }
+ 
